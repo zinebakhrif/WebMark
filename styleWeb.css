@@ -1,0 +1,81 @@
+
+  	body {
+	margin: 0;
+	padding: 0;
+     }
+  
+  body:before {
+	content: '';
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-image: url(./img/MarkBackg.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	background-size: cover;
+	-webkit-filter: blur(7px);
+	-moz-filter: blur(7px);
+	filter: blur(7px);
+  }
+
+   .ac{
+   display:inline-black;
+   width:70px;
+   height:70px;
+   background-color:black;
+   position:absolute;
+   }
+
+	   .navi li{ 
+	   padding-top:40px;
+	   line-height:30px;
+	   -moz-transform: rotate(-60deg);
+       -webkit-transform: rotate(-60deg);
+       transform: rotate(-90deg);
+	   }
+	   .stybord{
+	   border-radius:20px;
+	   border:1px solid gray;
+	   padding:5px 10px;
+	   display:inline-block;
+	   width:90px;
+	   }
+	   
+	   .stybord img{
+	     display: block;
+         margin-left: auto;
+         margin-right: auto;
+		 }
+	  	   
+	   .brd{
+	   border-radius:20px;
+	   border:1px solid gray;
+	   padding:6px 8px;
+	   width:70px;
+	   height:77px;
+	   text-align:center;	   
+	   }
+	   .frm1{
+	   	   width:27px;height:18px;
+		   background-color: rgb(255, 107, 75);
+		   border: 1px solid rgb(255, 107, 75);
+		   -ms-transform: rotate(-20deg);
+		   transform: rotate(-20deg);
+	   }
+	   
+	   	   .frm2{
+		   width:27px;height:18px;
+           background-color:rgb(250, 240, 255);
+           border: 1px solid rgb(250, 240, 255);
+		   -ms-transform: rotate(20deg);
+		   transform: rotate(20deg);
+		    margin-left:20px;
+	       }
+		   .frmtxt{
+		   font-size:7pt;
+		   line-height:10px;
+		   padding-top:10px;
+		   color:rgb(250, 240, 255);
+		   }
