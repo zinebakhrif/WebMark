@@ -10,7 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   
   <link rel="stylesheet" href="styleWeb.css" >
-  
+   
 </head>
 
 <body>
@@ -104,12 +104,15 @@
 				 <p style="display:none;" id="desc4"> description 4 carte visite 4.</p>
 				 
 				 <!-- image Logo -->
-				 <div style="position:absolute;top:430px;left:3%;display:none;" id="idlogo">				 			 				 
+				 <div style="position:absolute;top:430px;left:3%;display:none;" id="idlogo">	
 		         <p class="stybord">
-				 <input type="image" src="./img/logo2.jpg" width="65px" height="40px" onclick="showimglg(1)" >
+				 <input type="image" src="./img/logo1.jpg" width="65px" height="40px" onclick="showimglg(1)" >
+				 </p>				 
+		         <p class="stybord">
+				 <input type="image" src="./img/logo2.jpg" width="65px" height="40px" onclick="showimglg(2)" >
 				 </p>
 				 <p class="stybord">
-				 <input type="image" src="./img/logo3.png" width="65px" height="40px" onclick="showimglg(2)" >
+				 <input type="image" src="./img/logo3.png" width="65px" height="40px" onclick="showimglg(3)" >
 				 </p>				 
 				 </div>
 				 <!-- le description Logo -->
@@ -120,11 +123,14 @@
 				 <!-- image flyer -->
 				 <div style="position:absolute;top:430px;left:3%;display:none;" id="idimgf">
 				 
+				 <p class="stybord">
+				 <input type="image" src="./img/flyer1.png" width="65px" height="40px" onclick="showimgfl(1)" >
+				 </p>
 		         <p class="stybord">
-				 <input type="image" src="./img/flyer2.png" width="65px" height="40px" onclick="showimgfl(1)" >
+				 <input type="image" src="./img/flyer2.png" width="65px" height="40px" onclick="showimgfl(2)" >
 				 </p>
 				 <p class="stybord">
-				 <input type="image" src="./img/flyer3.jpg" width="65px" height="40px" onclick="showimgfl(2)" >
+				 <input type="image" src="./img/flyer3.jpg" width="65px" height="40px" onclick="showimgfl(3)" >
 				 </p>				 
 				 </div>
 				 <!-- le description flyer -->
@@ -133,12 +139,17 @@
 				 <p style="display:none;" id="descflyer3"> description 3 flyer 3.</p>
 				 
 				 <!-- image brochure -->
-				 <div style="position:absolute;top:430px;left:3%;display:none;" id="idimgbro">				 			 				 
+				 <div style="position:absolute;top:430px;left:3%;display:none;" id="idimgbro">
+				 
+				 <p class="stybord">
+				 <input type="image" src="./img/brochure1.jpg" width="65px" height="40px" onclick="showimgbr(1)" >
+				 </p>
+				 
 		         <p class="stybord">
-				 <input type="image" src="./img/brochure2.jpg" width="65px" height="40px" onclick="showimgbr(1)" >
+				 <input type="image" src="./img/brochure2.jpg" width="65px" height="40px" onclick="showimgbr(2)" >
 				 </p>
 				 <p class="stybord">
-				 <input type="image" src="./img/brochure3.jpg" width="65px" height="40px" onclick="showimgbr(2)">
+				 <input type="image" src="./img/brochure3.jpg" width="65px" height="40px" onclick="showimgbr(3)">
 				 </p>				 
 				 </div>
 				 <!-- le description brochure -->
@@ -243,20 +254,20 @@
       var pct;
      if (num == 1) {
       pct = "./img/carte1.jpg";
-	  document.getElementById('plcdesc').innerHTML=document.getElementById('desc2').innerHTML;
+	  document.getElementById('plcdesc').innerHTML=document.getElementById('desc1').innerHTML;
     } else if(num == 2) {
       pct = "./img/carte2.jpg";
-      document.getElementById('plcdesc').innerHTML=document.getElementById('desc3').innerHTML;
+      document.getElementById('plcdesc').innerHTML=document.getElementById('desc2').innerHTML;
     }else{
 	pct = "./img/carte3.jpg";
-	document.getElementById('plcdesc').innerHTML=document.getElementById('desc4').innerHTML;
+	document.getElementById('plcdesc').innerHTML=document.getElementById('desc3').innerHTML;
 	}
     document.getElementById('plcimg').src = pct;
 	
   }
   
   function showcartcv() {
-  document.getElementById('plcimg').src ="./img/carte.png";
+  document.getElementById('plcimg').src ="./img/carte1.jpg";
   document.getElementById('titre').innerHTML="Carte Visite";
   document.getElementById('idcartev').style.display="";
   document.getElementById('carte').style.display="none";
@@ -271,9 +282,12 @@
       function showimglg(num) {
       var pct;
      if (num == 1) {
-      pct = "./img/logo2.jpg";
+      pct = "./img/logo1.jpg";
+	  document.getElementById('plcdesc').innerHTML=document.getElementById('desclogo1').innerHTML;
+    }else if(num == 2){
+	  pct = "./img/logo2.jpg";
 	  document.getElementById('plcdesc').innerHTML=document.getElementById('desclogo2').innerHTML;
-    }else{
+	}else{
 	pct = "./img/logo3.png";
 	document.getElementById('plcdesc').innerHTML=document.getElementById('desclogo3').innerHTML;
 	}
@@ -296,9 +310,12 @@
         function showimgfl(num) {
       var pct;
      if (num == 1) {
-      pct = "./img/flyer2.png";
+      pct = "./img/flyer1.png";
+	  document.getElementById('plcdesc').innerHTML=document.getElementById('descflyer1').innerHTML;
+    }else if(num == 2){
+	  pct = "./img/flyer2.png";
 	  document.getElementById('plcdesc').innerHTML=document.getElementById('descflyer2').innerHTML;
-    }else{
+	}else{
 	pct = "./img/flyer3.jpg";
 	document.getElementById('plcdesc').innerHTML=document.getElementById('descflyer3').innerHTML;
 	}
@@ -322,9 +339,12 @@
         function showimgbr(num) {
       var pct;
      if (num == 1) {
-      pct = "./img/brochure2.jpg";
+      pct = "./img/brochure1.jpg";
+	  document.getElementById('plcdesc').innerHTML=document.getElementById('descbrochure1').innerHTML;
+    }else if(num == 2){
+	  pct = "./img/brochure2.jpg";
 	  document.getElementById('plcdesc').innerHTML=document.getElementById('descbrochure2').innerHTML;
-    }else{
+	}else{
 	pct = "./img/brochure3.jpg";
 	document.getElementById('plcdesc').innerHTML=document.getElementById('descbrochure3').innerHTML;
 	}
